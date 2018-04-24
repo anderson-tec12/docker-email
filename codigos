@@ -1,0 +1,17 @@
+docker-compose up -d
+  para rodar o compose no modo deamon
+
+docker-compose ps
+  verificar se tem algum serviço rodando
+
+docker-compose exec db psql -U postgres -c '/l'
+  executaremos um comando de consulta ao banco de dados postgre
+
+docker-compose down
+  desligando o serviço e a rede que foi criada
+
+docker-compose ps
+  verificar se tem algum serviço rodando
+  sempre verificar se tem algum ativo
+
+docker-compose exec db psql -U postgres -f /scripts/check.sql
